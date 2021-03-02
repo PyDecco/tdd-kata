@@ -2,7 +2,8 @@ class Greeter {
   constructor() {
   }
   greet(name) {
-    return 'Hello '+ name
+    const finalName = name.trim()
+    return 'Hello '+ finalName
   }
 }
 module.exports = Greeter;
