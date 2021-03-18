@@ -10,6 +10,9 @@ test('shoud be able trim function effect ', () => {
   expect(greeter.greet('             Joe ')).toEqual('Hello Joe');
 });
 test('should be able first letter uppercase ', () => {
-  expect(greeter.greet('deco')).toEqual(('Hello Deco'))
-})
+  expect(greeter.greet('deco')).toEqual(('Hello Deco'));
+});
+test('should be able greet according to the hours 6:00 - 12:00', () => {
+  expect(greeter.greet('deco')).toEqual(('good morning Deco'))
+});
 })
