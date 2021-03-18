@@ -10,7 +10,7 @@ test('shoud be able trim function effect ', () => {
   expect(greeter.greet('Deco       ')).toEqual('Hello Deco');
   expect(greeter.greet('             Joe ')).toEqual('Hello Joe');
 });
-test('should be able first uppercase ', () => {
+test('should be able first letter uppercase ', () => {
   const greeter = new Greeter()
   expect(greeter.greet('deco')).toEqual(('Hello Deco'))
 })
