@@ -13,11 +13,13 @@ class Greeter {
 
   searchHour(currentTime){
     let greeting;     
-    if (6 < currentTime && currentTime < 12 )
+    if (6 <= currentTime && currentTime <= 12 )
       greeting = 'good morning ';
-    else if (18 < currentTime && currentTime < 22 )
+    else if (18 <= currentTime && currentTime <= 22 )
       greeting = 'Good evening ';
-      else
+    else if ((currentTime > 22 && currentTime <= 23) || (currentTime >= 0 && currentTime < 6))
+      greeting = 'Good night ';
+      else 
       greeting = 'Hello ';
     return greeting
   }

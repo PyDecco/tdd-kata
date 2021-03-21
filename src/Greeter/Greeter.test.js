@@ -2,9 +2,15 @@ const Greeter = require('./Greeter');
 
 describe('Greeter', () => {
   let greeter;
-  let date;
   beforeEach(() => {
     greeter = new Greeter
+    jest.spyOn(global, "Date").mockImplementation(() => {
+      return {
+        getHours() {
+          return 14;
+        },
+      };
+    });
     
   });
 
@@ -21,7 +27,7 @@ test('should be able first letter uppercase ', () => {
   expect(greeter.greet('deco')).toEqual(('Hello Deco'));
 });
 
-test('should be able greet according to the hours 6:00 - 12:00', () => {
+test('should be able greet according to the hours 6:00 - 12:00', () => { 
   jest.spyOn(global, "Date").mockImplementation(() => {
     return {
       getHours() {
@@ -49,6 +55,6 @@ test('should be able greet according to the hours 22:00 - 06:00', () => {
       },
     };
   });
-  expect(greeter.greet('deco')).toEqual(('Good evening Deco'));
+  expect(greeter.greet('deco')).toEqual(('Good night Deco'));
 });
 });
