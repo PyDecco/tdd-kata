@@ -6,6 +6,7 @@ class Greeter {
     const nameFormatted = name.charAt(0).toUpperCase() + name.slice(1);
     const finalName = nameFormatted.trim();
     const greeting = this.searchHour(currentTime);
+    console.log(greeting + finalName)
     return greeting + finalName;
   }
 
