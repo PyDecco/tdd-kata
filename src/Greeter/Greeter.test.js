@@ -57,4 +57,9 @@ test('should be able greet according to the hours 22:00 - 06:00', () => {
   });
   expect(greeter.greet('deco')).toEqual(('Good night Deco'));
 });
+test('shoud be able return log ', () => {
+  const myMock = jest.spyOn(global.console, "log").mockImplementation();
+  const response = greeter.greet('Deco')
+  expect(myMock).toHaveBeenLastCalledWith(response);
+});
 });
