@@ -31,4 +31,14 @@ test('should be able greet according to the hours 6:00 - 12:00', () => {
   });
   expect(greeter.greet('deco')).toEqual(('good morning Deco'));
 });
+test('should be able greet according to the hours 18:00 - 22:00', () => {
+  jest.spyOn(global, "Date").mockImplementation(() => {
+    return {
+      getHours() {
+        return 19;
+      },
+    };
+  });
+  expect(greeter.greet('deco')).toEqual(('Good evening Deco'));
+});
 });
