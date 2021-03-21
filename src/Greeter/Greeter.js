@@ -15,6 +15,8 @@ class Greeter {
     let greeting;     
     if (6 < currentTime && currentTime < 12 )
       greeting = 'good morning ';
+    else if (18 < currentTime && currentTime < 22 )
+      greeting = 'Good evening ';
       else
       greeting = 'Hello ';
     return greeting
