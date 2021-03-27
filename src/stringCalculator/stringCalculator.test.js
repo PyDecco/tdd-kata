@@ -14,4 +14,8 @@ describe("stringCalculator", () => {
     const result = stringCalculator("2,1");
     expect(result).toEqual(3);
   });
+  test("shoud be able return a sum for new line between numbers", () => {
+    const result = stringCalculator("2\n1");
+    expect(result).toEqual(3);
+  });
 });
