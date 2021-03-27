@@ -10,4 +10,8 @@ describe("stringCalculator", () => {
     const result = stringCalculator("2");
     expect(result).toEqual(2);
   });
+  test("shoud be able return a sum for comma between numbers", () => {
+    const result = stringCalculator("2,1");
+    expect(result).toEqual(3);
+  });
 });
