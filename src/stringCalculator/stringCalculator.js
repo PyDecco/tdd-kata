@@ -1,6 +1,6 @@
 module.exports = (value) => {
   let result;
-  if (value.charAt(1) == ",") {
+  if (value.charAt(1) == "," || value.charAt(1) == "\n") {
     return result = parseInt(value.charAt(0)) + parseInt(value.charAt(2))
   }
   result = value ? value : 0
