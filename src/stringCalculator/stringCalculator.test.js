@@ -18,4 +18,8 @@ describe("stringCalculator", () => {
     const result = stringCalculator("2\n1");
     expect(result).toEqual(3);
   });
+  test("shoud be able return a sum for new line and comma between numbers", () => {
+    const result = stringCalculator("1\n2,3\n4");
+    expect(result).toEqual(10);
+  });
 });
