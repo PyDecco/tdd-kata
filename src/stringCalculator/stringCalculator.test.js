@@ -22,4 +22,8 @@ describe("stringCalculator", () => {
     const result = stringCalculator("1\n2,3\n4");
     expect(result).toEqual(10);
   });
+  test("shoud be able return error message for negative value", () => {
+    const result = stringCalculator("-1,2, -3");
+    expect(result).toEqual("negativos não permitidos: -1, -3");
+  });
 });
